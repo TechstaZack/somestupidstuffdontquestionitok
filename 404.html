@@ -43,8 +43,7 @@
     messagingSenderId: "82134761757",
     appId: "1:82134761757:web:fbad1cf81ff00e45d861f4"
   };
-
-  const app = initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
 
   let goto = window.location.pathname;
   goto = goto.replace('/', '')
