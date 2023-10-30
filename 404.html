@@ -44,7 +44,7 @@
     appId: "1:82134761757:web:fbad1cf81ff00e45d861f4"
   };
   firebase.initializeApp(firebaseConfig);
-
+  const database = firebase.database()
   let goto = window.location.pathname;
   goto = goto.replace('/', '')
   const variableRef = database.ref('/'+goto);
