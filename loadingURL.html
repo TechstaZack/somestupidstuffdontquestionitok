@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>
+            Techsta.Link
+        </title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+        <div class="login fade-in">
+            <div class="logo"><img src='logo.png'></div>
+            <h2>Techsta.Link</h2>
+            <h5>Shorten any URL, for free</h5>
+           <br>
+           <h1>We are currently Redirection You To Your Destination Page</h1>
+           <br>
+           <h3>This may take a few seconds...</h3>
+              
+              
+                    
+        </div>
+    </div>
+        <script src="index.js"></script>
+        <script>
+            const firebaseConfig = {
+    apiKey: "AIzaSyBLUOrxSKOMUeiLDIY0dTBihkNixehRfdc",
+    authDomain: "techstalink.firebaseapp.com",
+    projectId: "techstalink",
+    storageBucket: "techstalink.appspot.com",
+    messagingSenderId: "82134761757",
+    appId: "1:82134761757:web:fbad1cf81ff00e45d861f4"
+  };
+
+  const app = initializeApp(firebaseConfig);
+
+
+        </script>
+        <script>
+            $(document).ready(function () {
+                $(".login").addClass("loaded");
+            });
+        </script>
+    </body>
+</html>
