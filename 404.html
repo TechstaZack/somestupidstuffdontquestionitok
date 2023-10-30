@@ -51,7 +51,7 @@
   const check = goto.charAt(goto.length - 1);
   if(check == '+'){
     newGoto = goto.replace('+', '')
-    const variableRef = database.ref('/'+goto);
+    const variableRef = database.ref('/'+newGoto);
     
     variableRef.once('value')
   .then(snapshot => {
@@ -73,7 +73,7 @@
         
         window.location.href = toforwardto
     } else {
-        console.log('cannot find')
+        console.log('cannot find techsta.link')
         document.getElementById('totalDIV').innerHTML= `<div class="logo"><img src='logo.png'></div>
             <h2>Techsta.Link</h2>
             <h5>Shorten any URL, for free</h5>
