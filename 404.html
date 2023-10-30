@@ -48,7 +48,8 @@
 
   let goto = window.location.pathname;
   goto = goto.replace('/', '')
-  const variableRef = database.ref(goto);
+  const variableRef = database.ref('/'+goto);
+  console.log(goto)
   
   variableRef.once('value')
   .then(snapshot => {
@@ -56,8 +57,9 @@
       const data = snapshot.val();
         const toforwardto = data.url;
         const domain = data.domain;
-
+        console.log('it got here')
         if(domain !='techsta.link'){
+            console.log('wrong domain')
             document.getElementById('totalDIV').innerHTML= `<div class="logo"><img src='logo.png'></div>
             <h2>Techsta.Link</h2>
             <h5>Shorten any URL, for free</h5>
@@ -68,9 +70,10 @@
            <a class="btn btn-outline-primary" type='submit' href="index.html">Create Your Own</a>`
            return
         }
-
+        
         window.location(toforwardto)
     } else {
+        console.log('cannot find')
         document.getElementById('totalDIV').innerHTML= `<div class="logo"><img src='logo.png'></div>
             <h2>Techsta.Link</h2>
             <h5>Shorten any URL, for free</h5>
