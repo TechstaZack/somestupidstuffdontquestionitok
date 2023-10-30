@@ -7,14 +7,17 @@ const firebaseConfig = {
     appId: "1:82134761757:web:fbad1cf81ff00e45d861f4"
   };
 
-  const app = initializeApp(firebaseConfig);
 
-function createTheURL(e){
+firebase.initializeApp(firebaseConfig);
+
+
+const form = document.getElementById('createURL')
+form.addEventListener('submit', function(e){
     e.preventDefault();
+    const database = firebase.database()
     const shortener = document.getElementById('short').value;
     const url = document.getElementById('url').value;
     const domain = document.getElementById('domain').value;
-    const database = firebase.database();
     const variableRef = database.ref(shortener);
   
     variableRef.once('value')
@@ -42,11 +45,6 @@ function createTheURL(e){
         }
       })
       .catch(error => {
-        console.error('Error retrieving data:', error);
+        document.getElementById('errorToPrint').innerHTML = 'there was an error when making your URL'
       });
-}
-
-const signupfrom = document.getElementById('createURL')
-signupfrom.addEventListener('submit', createTheURL)
-
-console.log(window.location.pathname)  
+})
