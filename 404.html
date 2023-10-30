@@ -85,7 +85,15 @@
     }
   })
   .catch(error => {
-    document.getElementById('errorToPrint').innerHTML = 'There was an error when making your URL';
+    console.log(error)
+    document.getElementById('totalDIV').innerHTML = `<div class="logo"><img src='logo.png'></div>
+            <h2>Techsta.Link</h2>
+            <h5>Shorten any URL, for free</h5>
+           <br>
+           <h1>Sorry,</h1>
+           <br>
+           <h3>We are unable to find a shortened URL with that shortener, or there was an inside error.</h3>
+           <a class="btn btn-outline-primary" type='submit' href="index.html">Create Your Own</a>`;
   });
 
         </script>
