@@ -49,9 +49,10 @@
   let goto = window.location.pathname;
   goto = goto.replace('/', '')
   const check = goto.charAt(goto.length - 1);
+  newGoto = goto.replace('+', '')
+
   if(check == '+'){
-    newGoto = goto.replace('+', '')
-    const variableRef = database.ref('techsta.link/'+newGoto);
+        const variableRef = database.ref('techsta.link/'+newGoto);
     
     variableRef.once('value')
   .then(snapshot => {
