@@ -118,7 +118,8 @@
             });
   });
   }else{
-  const variableRef = database.ref('techsta.link/'+goto);
+  const variableRef = database.ref(`techsta.link/${newGoto}`);
+  console.log(`techsta.link/${newGoto}`)
   
   variableRef.once('value')
   .then(snapshot => {
