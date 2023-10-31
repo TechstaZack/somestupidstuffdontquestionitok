@@ -30,7 +30,7 @@ body {
     font-family: 'Sometype Mono', monospace;
     padding: 10px;
     border-radius: 8px;
-    margin: 20px;
+    margin: 100px;
   }
   
   .logo {
@@ -55,7 +55,7 @@ body {
     border-radius: 5px;
     background-color: #242424;
     color: white;
-    width: 50%;
+    width: 100%;
     outline: none;
   }
   
