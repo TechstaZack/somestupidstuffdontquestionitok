@@ -32,8 +32,8 @@ form.addEventListener('submit', function(e){
     const url = document.getElementById('url').value;
     const domain = document.getElementById('domain').value;
     const variableRef = database.ref(shortener);
-    if(shortener.includes('+') || shortener.includes('/') || shortener.includes(' ')){
-        document.getElementById('errorToPrint').innerHTML = 'Your Shortener cannot contain a space, +, or /.'
+    if(shortener.includes('+') || shortener.includes('/') || shortener.includes(' ') || shortener.includes('$') || shortener.includes('#') || shortener.includes('[') || shortener.includes(']') || shortener.includes('.'){
+        document.getElementById('errorToPrint').innerHTML = 'Your Shortener cannot contain a space, +, /, $, #, ., [,  and ].'
         return
     }
   
