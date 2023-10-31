@@ -64,15 +64,19 @@
         document.getElementById('totalDIV').innerHTML= `<div class="logo"><img src='logo.png'></div>
             <h2>Techsta.Link</h2>
             <h5>Shorten any URL, for free</h5>
-           <br>
-           <h5>The Techsta.link with the shortener ${originalgoto} will redirect to:</h5>
+           <hr>
+           <h5>The Techsta.link with the shortener "${originalgoto}" will redirect to:</h5>
            <br>
            <h1>${toforwardto}</h1>
            <hr>
-           <a class="btn btn-outline-primary" type='submit' href="${toforwardto}">Proceed</a>
+           <a class="btn btn-outline-danger" type='submit' href="${toforwardto}">Proceed</a>
+           <br>
            <br>
            <p>Or</p>
            <a class="btn btn-outline-primary" type='submit' href="index.html">Create Your Own</a>`
+                    $(document).ready(function () {
+                $(".login").addClass("loaded");
+            });
         
     } else {
         console.log('cannot find techsta.link')
@@ -85,6 +89,9 @@
            <h5>We can not locate your techsta.link. This can be because of a wrong shortener, or an error on our end.</h5>
            <hr>
            <a class="btn btn-outline-primary" type='submit' href="index.html">Create Your Own</a>`
+                    $(document).ready(function () {
+                $(".login").addClass("loaded");
+            });
            return
     }
   })
@@ -99,6 +106,9 @@
            <h5>We can not locate your techsta.link. This can be because of a wrong shortener, or an error on our end.</h5>
            <hr>
            <a class="btn btn-outline-primary" type='submit' href="index.html">Create Your Own</a>`;
+                  $(document).ready(function () {
+                $(".login").addClass("loaded");
+            });
   });
   }else{
   const variableRef = database.ref('/'+goto);
@@ -120,6 +130,9 @@
            <h5>We can not locate your techsta.link. This can be because of a wrong shortener, or an error on our end.</h5>
            <hr>
            <a class="btn btn-outline-primary" type='submit' href="index.html">Create Your Own</a>`
+                        $(document).ready(function () {
+                $(".login").addClass("loaded");
+            });
            return
         }
         
@@ -135,6 +148,9 @@
            <h5>We can not locate your techsta.link. This can be because of a wrong shortener, or an error on our end.</h5>
            <hr>
            <a class="btn btn-outline-primary" type='submit' href="index.html">Create Your Own</a>`
+                    $(document).ready(function () {
+                $(".login").addClass("loaded");
+            });
            return
     }
   })
@@ -149,13 +165,12 @@
            <h5>We can not locate your techsta.link. This can be because of a wrong shortener, or an error on our end.</h5>
            <hr>
            <a class="btn btn-outline-primary" type='submit' href="index.html">Create Your Own</a>`;
+                  $(document).ready(function () {
+                $(".login").addClass("loaded");
+            });
   });
   }
         </script>
         <script>
-            $(document).ready(function () {
-                $(".login").addClass("loaded");
-            });
-        </script>
     </body>
 </html>
