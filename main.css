@@ -55,7 +55,7 @@ body {
     border-radius: 5px;
     background-color: #242424;
     color: white;
-    width: 100%;
+    width: 50%;
     outline: none;
   }
   
@@ -93,30 +93,3 @@ body {
 .buttonOneLine {
     margin: 5px; 
   }
-
-@media (max-width: 768px) {
-    .login {
-        margin: 10px;
-        padding: 5px;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    .input-container {
-        margin: 10px 0;
-    }
-
-    .input-field {
-        padding: 5px;
-    }
-
-    .input-field:focus + .input-label,
-    .input-field:valid + .input-label,
-    .input-field:not(:placeholder-shown) + .input-label {
-        top: -5px;
-        left: 5px;
-        font-size: 12px;
-    }
-}
