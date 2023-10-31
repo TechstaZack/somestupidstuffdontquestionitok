@@ -52,7 +52,7 @@
   newGoto = goto.replace('+', '')
 
   if(check == '+'){
-        const variableRef = database.ref('techsta.link/'+newGoto);
+        const variableRef = database.ref('techstalink/'+newGoto);
     
     variableRef.once('value')
   .then(snapshot => {
@@ -118,7 +118,7 @@
             });
   });
   }else{
-  const variableRef = database.ref(`techsta.link/${newGoto}`);
+  const variableRef = database.ref(`techstalink/${newGoto}`);
   console.log(`techsta.link/${newGoto}`)
   
   variableRef.once('value')
