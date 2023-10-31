@@ -32,6 +32,7 @@ form.addEventListener('submit', function(e){
     shortener = shortener.toLowerCase()
     const url = document.getElementById('url').value;
     const domain = document.getElementById('domain').value;
+    const domain2 = domain.replace('.','')
     const variableRef = database.ref(shortener);
     if( shortener.includes('+') || shortener.includes('/') || shortener.includes(' ') || shortener.includes('$') || shortener.includes('#') || shortener.includes('[') || shortener.includes(']') || shortener.includes('.') ){
         document.getElementById('errorToPrint').innerHTML = 'Your Shortener cannot contain a space, +, /, $, #, ., [,  and ].'
@@ -49,7 +50,7 @@ form.addEventListener('submit', function(e){
                 domain: domain
               };
 
-              const tosave = database.ref(`${domain}/${shortener}`)
+              const tosave = database.ref(`${domain2}/${shortener}`)
 
               tosave.set(shortenerInfo)
               .then(() => {
