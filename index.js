@@ -22,10 +22,11 @@ function copyToClipboard(){
 
 
 if(screen.width <= 1028){
-var forPhones = document.getElementById('.login')
-    forPhones.width = 100%;
-    forPhones.height = 100%;
-    margin = 0+'px';
+var forPhones = document.querySelector('.login');
+forPhones.style.width = '100%';
+forPhones.style.height = '100%';
+forPhones.style.margin = '0px';
+
 
 }
 function restart(){
