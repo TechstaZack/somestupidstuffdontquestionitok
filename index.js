@@ -28,7 +28,8 @@ const form = document.getElementById('createURL')
 form.addEventListener('submit', function(e){
     e.preventDefault();
     const database = firebase.database()
-    const shortener = document.getElementById('short').value;
+    let shortener = document.getElementById('short').value;
+    shortener = shortener.toLowerCase()
     const url = document.getElementById('url').value;
     const domain = document.getElementById('domain').value;
     const variableRef = database.ref(shortener);
@@ -48,7 +49,7 @@ form.addEventListener('submit', function(e){
                 domain: domain
               };
 
-              const tosave = database.ref(shortener)
+              const tosave = database.ref(`${domain}/${shortener}`)
 
               tosave.set(shortenerInfo)
               .then(() => {
