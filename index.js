@@ -52,7 +52,7 @@ form.addEventListener('submit', function(e){
 
               tosave.set(shortenerInfo)
               .then(() => {
-                document.getElementById('somethingImportant').innerHTML = `h3>URL Successfully created!</h3>
+                document.getElementById('somethingImportant').innerHTML = `<h3>URL Successfully created!</h3>
                 <input id="urlGoesHere" readonly="readonly" class="input-field form-control bg-dark text-primary">
                 <hr>
                 <span id="button-container">
