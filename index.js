@@ -20,15 +20,6 @@ function copyToClipboard(){
   
 } 
 
-
-if(screen.width <= 1028){
-var forPhones = document.querySelector('.login');
-forPhones.style.width = '100%';
-forPhones.style.height = '100%';
-forPhones.style.margin = '0px';
-
-
-}
 function restart(){
     window.location.reload()
 }
