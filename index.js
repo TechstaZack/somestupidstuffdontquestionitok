@@ -35,7 +35,7 @@ form.addEventListener('submit', function(e){
     if( shortener.includes('+') || shortener.includes('/') || shortener.includes(' ') || shortener.includes('$') || shortener.includes('#') || shortener.includes('[') || shortener.includes(']') || shortener.includes('.') ){
         document.getElementById('errorToPrint').innerHTML = 'Your Shortener cannot contain a space, +, /, $, #, ., [,  and ].'
         return
-    }}
+    }
     variableRef.once('value')
       .then(snapshot => {
         if (snapshot.exists()) {
