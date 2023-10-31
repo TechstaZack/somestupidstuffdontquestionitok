@@ -33,7 +33,7 @@ form.addEventListener('submit', function(e){
     const url = document.getElementById('url').value;
     const domain = document.getElementById('domain').value;
     const domain2 = domain.replace('.','')
-    const variableRef = database.ref(shortener);
+    const variableRef = database.ref(`${domain2}/${shortener}`)
     if( shortener.includes('+') || shortener.includes('/') || shortener.includes(' ') || shortener.includes('$') || shortener.includes('#') || shortener.includes('[') || shortener.includes(']') || shortener.includes('.') ){
         document.getElementById('errorToPrint').innerHTML = 'Your Shortener cannot contain a space, +, /, $, #, ., [,  and ].'
         return
