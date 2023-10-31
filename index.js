@@ -70,7 +70,7 @@ form.addEventListener('submit', function(e){
                       <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
                     </svg> Make Another</button>
                 </span>`
-                document.getElementById('urlGoesHere').value = url
+                document.getElementById('urlGoesHere').value = `https://${domain}/${shortener}`
               })
               .catch(error => {
                 document.getElementById('errorToPrint').innerHTML = 'there was an error when making your URL'
