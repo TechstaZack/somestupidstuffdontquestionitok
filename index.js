@@ -32,11 +32,11 @@ form.addEventListener('submit', function(e){
     const url = document.getElementById('url').value;
     const domain = document.getElementById('domain').value;
     const variableRef = database.ref(shortener);
-    if(shortener.includes('+') || shortener.includes('/') || shortener.includes(' ') || shortener.includes('$') || shortener.includes('#') || shortener.includes('[') || shortener.includes(']') || shortener.includes('.'){
+    if(shortener.includes('+') || shortener.includes('/') || shortener.includes(' ') || shortener.includes('$') || shortener.includes('#') || shortener.includes('[') || shortener.includes(']') || shortener.includes('.')){
         document.getElementById('errorToPrint').innerHTML = 'Your Shortener cannot contain a space, +, /, $, #, ., [,  and ].'
         return
+    
     }
-  
     variableRef.once('value')
       .then(snapshot => {
         if (snapshot.exists()) {
