@@ -51,7 +51,7 @@
   const check = goto.charAt(goto.length - 1);
   if(check == '+'){
     newGoto = goto.replace('+', '')
-    const variableRef = database.ref('/'+newGoto);
+    const variableRef = database.ref('techsta.link/'+newGoto);
     
     variableRef.once('value')
   .then(snapshot => {
@@ -124,23 +124,7 @@
     if (snapshot.exists()) {
       const data = snapshot.val();
         const toforwardto = data.url;
-        const domain = data.domain;
-        if(domain !='techsta.link'){
-            console.log('wrong domain')
-            document.getElementById('totalDIV').innerHTML= `<div class="logo"><img src='logo.png'></div>
-            <h2>Techsta.Link</h2>
-            <h5>Shorten any URL, for free</h5>
-           <br>
-           <h1>Sorry,</h1>
-           <br>
-           <h5>We can not locate your techsta.link. This can be because of a wrong shortener, or an error on our end.</h5>
-           <hr>
-           <a class="btn btn-outline-primary" type='submit' href="index.html">Create Your Own</a>`
-                        $(document).ready(function () {
-                $(".login").addClass("loaded");
-            });
-           return
-        }
+        
         
         window.location.href = toforwardto
     } else {
@@ -177,5 +161,6 @@
   });
   }
         </script>
+
     </body>
 </html>
