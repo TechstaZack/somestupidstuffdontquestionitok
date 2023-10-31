@@ -20,6 +20,14 @@ function copyToClipboard(){
   
 } 
 
+
+if(screen.width <= 1028){
+var forPhones = document.getElementById('.login')
+    forPhones.width = 100%;
+    forPhones.height = 100%;
+    margin = 0+'px';
+
+}
 function restart(){
     window.location.reload()
 }
