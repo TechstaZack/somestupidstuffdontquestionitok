@@ -34,7 +34,7 @@ hehabooya.addEventListener('submit', function(e){
     code = code.replace('+',"")
   }
   const urlto = 'techsta.link/' + code + '+';
-  window.location.href = urlto
+  window.open(urlto, '_blank').focus();
 })
 const iranoutofstupidnameslmao = document.getElementById('unconfuzletheconfuzle');
 iranoutofstupidnameslmao.addEventListener('submit', function(e){
@@ -47,7 +47,7 @@ iranoutofstupidnameslmao.addEventListener('submit', function(e){
     code = code.replace('+',"")
   }
   const urlto = 'techsta.link/' + code + '+';
-  window.location.href = urlto
+  window.open(urlto, '_blank').focus();
 })
 
 const form = document.getElementById('createURL')
