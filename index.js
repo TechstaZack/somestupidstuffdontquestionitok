@@ -23,6 +23,32 @@ function copyToClipboard(){
 function restart(){
     window.location.reload()
 }
+const hehabooya = document.getElementById('boyswegoin')
+hehabooya.addEventListener('submit', function(e){
+  e.preventDefault()
+  let code = document.getElementById('wegohereboys').value;
+  if (code.includes('techsta.link' || '/' || 'https://' || '+')){
+    code = code.replace('techsta.link',"")
+    code = code.replace('/',"")
+    code = code.replace('https://',"")
+    code = code.replace('+',"")
+  }
+  const urlto = 'techsta.link/' + code + '+';
+  window.location.href = urlto
+})
+const iranoutofstupidnameslmao = document.getElementById('unconfuzletheconfuzle');
+iranoutofstupidnameslmao.addEventListener('submit', function(e){
+  e.preventDefault()
+  let code = document.getElementById('wegohereboys').value;
+  if (code.includes('techsta.link' || '/' || 'https://' || '+')){
+    code = code.replace('techsta.link',"")
+    code = code.replace('/',"")
+    code = code.replace('https://',"")
+    code = code.replace('+',"")
+  }
+  const urlto = 'techsta.link/' + code + '+';
+  window.location.href = urlto
+})
 
 const form = document.getElementById('createURL')
 form.addEventListener('submit', function(e){
