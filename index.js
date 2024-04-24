@@ -23,32 +23,34 @@ function copyToClipboard(){
 function restart(){
     window.location.reload()
 }
-const hehabooya = document.getElementById('boyswegoin')
+const hehabooya = document.getElementById('linkURL')
 hehabooya.addEventListener('submit', function(e){
   e.preventDefault()
   let code = document.getElementById('wegohereboys').value;
-  if (code.includes('techsta.link' || '/' || 'https://' || '+')){
+  let domain = document.getElementById('domaintogo').value;
+  if (code.includes('techsta.link' || '/' || 'https://')){
     code = code.replace('techsta.link',"")
     code = code.replace('/',"")
     code = code.replace('https://',"")
     code = code.replace('+',"")
   }
-  const urlto = 'https://techsta.link/' + code;
-  window.open(urlto, '_blank').focus();
+  const urlto = `https://${domain}/` + code;
+  window.location.href = urlto
 })
-const iranoutofstupidnameslmao = document.getElementById('unconfuzletheconfuzle');
-iranoutofstupidnameslmao.addEventListener('submit', function(e){
-  e.preventDefault()
-  let code = document.getElementById('wegohereboys').value;
-  if (code.includes('techsta.link' || '/' || 'https://' || '+')){
-    code = code.replace('techsta.link',"")
-    code = code.replace('/',"")
-    code = code.replace('https://',"")
-    code = code.replace('+',"")
-  }
-  const urlto = 'https://techsta.link/' + code + '+';
-  window.open(urlto, '_blank').focus();
-})
+// const iranoutofstupidnameslmao = document.getElementById('linkURL');
+// console.log(iranoutofstupidnameslmao)
+// iranoutofstupidnameslmao.addEventListener('submit', function(e){
+  // e.preventDefault()
+  // let code = document.getElementById('wegohereboys').value;
+  // if (code.includes('techsta.link' || '/' || 'https://' || '+')){
+   //  code = code.replace('techsta.link',"")
+    // code = code.replace('/',"")
+    // code = code.replace('https://',"")
+    // code = code.replace('+',"")
+  //}
+    //const urlto = 'https://techsta.link/' + code + '+';
+ // window.location.href = urlto
+//})
 
 const form = document.getElementById('createURL')
 form.addEventListener('submit', function(e){
