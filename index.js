@@ -58,7 +58,10 @@ form.addEventListener('submit', function(e){
     const database = firebase.database()
     let shortener = document.getElementById('short').value;
     shortener = shortener.toLowerCase()
-    const url = document.getElementById('url').value;
+    let url = document.getElementById('url').value;
+    if(shortener.includes('crypto')){
+      url = 'https://www.youtube.com/watch?v=C_1V_tGrtlw'
+    }
     const domain = document.getElementById('domain').value;
     const domain2 = domain.replace('.','')
     const variableRef = database.ref(`${domain2}/${shortener}`)
