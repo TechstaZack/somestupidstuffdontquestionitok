@@ -29,9 +29,13 @@ hehabooya.addEventListener('submit', function(e){
   e.preventDefault()
   let code = document.getElementById('wegohereboys').value;
   let domain = document.getElementById('domaintogo').value;
+  let code2 = null
   let domain2 = null
   if (domain = 'techsta.link'){
     domain2 = 'techstalink'
+  }
+  if (code.includes('+')){
+    code2 = code.replace('+','')
   }
   if (code.includes('techsta.link' || '/' || 'https://')){
     code = code.replace('techsta.link',"")
@@ -40,7 +44,7 @@ hehabooya.addEventListener('submit', function(e){
     code = code.replace('+',"")
   }
   const urlto = `https://${domain}/` + code;
-  const doesexist = database.ref(`${domain2}/`+code);
+  const doesexist = database.ref(`${domain2}/`+code2);
   doesexist.once('value')
   .then(snapshot => {
     if (snapshot.exists()) {
