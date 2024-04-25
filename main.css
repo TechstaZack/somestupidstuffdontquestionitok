@@ -6,8 +6,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 100%;
+    margin: 0; 
+    width:100%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
   
   body::before {
@@ -24,6 +27,7 @@ body {
   
   .login {
     text-align: center;
+    width:100%;
   }
   
   .logo {
