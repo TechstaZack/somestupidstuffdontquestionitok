@@ -21,6 +21,7 @@ function copyToClipboard(){
   
 } 
 
+
 function restart(){
     window.location.reload()
 }
