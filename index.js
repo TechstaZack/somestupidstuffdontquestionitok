@@ -37,6 +37,8 @@ hehabooya.addEventListener('submit', function(e){
   }
   if (code.includes('+')){
     code2 = code.replace('+','')
+  }else{
+      code2 = code
   }
   if (code.includes('techsta.link' || '/' || 'https://')){
     code = code.replace('techsta.link',"")
