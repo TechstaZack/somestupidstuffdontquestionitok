@@ -62,7 +62,7 @@
   
 } 
 
-  if(check == '+'){
+  if(check != '+'){
         const variableRef = database.ref('techstalink/'+newGoto);
     
     variableRef.once('value')
