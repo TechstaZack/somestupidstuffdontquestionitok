@@ -1,3 +1,4 @@
+const currentDate = new Date();
 const firebaseConfig = {
     apiKey: "AIzaSyBLUOrxSKOMUeiLDIY0dTBihkNixehRfdc",
     authDomain: "techstalink.firebaseapp.com",
@@ -20,6 +21,7 @@ function copyToClipboard(){
     document.getElementById('haveucopied').innerHTML='Successfully Coppied!'
   
 } 
+
 
 
 function restart(){
@@ -91,6 +93,10 @@ form.addEventListener('submit', function(e){
     }
     variableRef.once('value')
       .then(snapshot => {
+          const day = currentDate.getDate();
+        const month = currentDate.getMonth() + 1; 
+        const year = currentDate.getFullYear();
+
         if (snapshot.exists()) {
           const variableData = snapshot.val();
             document.getElementById('errorToPrint').innerHTML = 'A shortened URL with this shortener has already been made.'
@@ -98,7 +104,10 @@ form.addEventListener('submit', function(e){
             const shortenerInfo = {
                 shortener: shortener,
                 url: url,
-                domain: domain
+                domain: domain,
+                year: year,
+                month: month,
+                day: day
               };
 
               const tosave = database.ref(`${domain2}/${shortener}`)
