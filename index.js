@@ -33,6 +33,7 @@ const nosubmit = document.getElementById('linkURL')
 nosubmit.submit(false);
 //skip
 skip.addEventListener('click', function(){
+    console.log('ran')
   let code = document.getElementById('wegohereboys').value;
   let domain = document.getElementById('domaintogo').value;
   let code2 = null
@@ -59,6 +60,7 @@ code2 = code.replace('+','')
   })
 })
 hehabooya.addEventListener('click', function(){
+        console.log('ran')
   let code = document.getElementById('wegohereboys').value;
   let domain = document.getElementById('domaintogo').value;
   let code2 = null
