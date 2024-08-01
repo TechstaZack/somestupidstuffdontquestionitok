@@ -125,6 +125,23 @@ form.addEventListener('submit', function(e){
         if (snapshot.exists()) {
           const variableData = snapshot.val();
             document.getElementById('errorToPrint').innerHTML = 'A shortened URL with this shortener has already been made.'
+            // if(nowyear > year && nowmonth == 1){
+            //    let lastyear = nowyear - 1
+            //    if(lastyear == year){
+            //        if(month != 12){
+            //        run creation code
+            //}else{
+            //invalid}
+            //}else{
+            //run creation code
+            //}
+            //else{
+            //let reqmonth = nowmonth - 2
+            //if(nowyear == year && reqmonth >= month){
+            //run creation code
+            //}else{
+            //runfailcode}
+            //}
         } else {
             const shortenerInfo = {
                 shortener: shortener,
