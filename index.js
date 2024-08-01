@@ -110,7 +110,7 @@ function copyToClipboard(){
     url.setSelectionRange(0, 99999);
 
     navigator.clipboard.writeText(url.value);
-    document.getElementById('haveucopied').innerHTML='Successfully Coppied!'
+    document.getElementById('haveucopied').innerHTML='Successfully Copied!'
   
 } 
 
