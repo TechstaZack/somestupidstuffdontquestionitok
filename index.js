@@ -30,7 +30,7 @@ function restart(){
 const hehabooya = document.getElementById('id1')
 const skip = document.getElementById('skip')
 const nosubmit = document.getElementById('linkURL')
-nosubmit.submit(false);
+
 //skip
 skip.addEventListener('click', function(){
     console.log('ran')
