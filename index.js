@@ -28,7 +28,7 @@ function restart(){
     window.location.reload()
 }
 const hehabooya = document.getElementById('id1')
-const skip = document.getElemendById('skip')
+const skip = document.getElementById('skip')
 const nosubmit = document.getElementById('linkURL')
 nosubmit.submit(false);
 //skip
