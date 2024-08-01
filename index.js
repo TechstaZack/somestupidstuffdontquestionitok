@@ -146,8 +146,7 @@ code = code.replace('+','')
       document.getElementById('Lnoexist').innerHTML = "Shortened URL Doesn't Exist"
     }
   })
-})
-function normalgo(){
+}function normalgo(){
         console.log('ran')
   let code = document.getElementById('wegohereboys').value;
   let domain = document.getElementById('domaintogo').value;
@@ -172,7 +171,7 @@ code = code.replace('+',"")
       document.getElementById('Lnoexist').innerHTML = "Shortened URL Doesn't Exist"
     }
   })
-})
+}
 // const iranoutofstupidnameslmao = document.getElementById('linkURL');
 // console.log(iranoutofstupidnameslmao)
 // iranoutofstupidnameslmao.addEventListener('submit', function(e){
@@ -271,4 +270,4 @@ function createtheURL(){
       .catch(error => {
         document.getElementById('errorToPrint').innerHTML = 'there was an error when making your URL'
       });
-})
+}
