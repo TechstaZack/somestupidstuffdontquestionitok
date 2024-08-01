@@ -28,6 +28,35 @@ function restart(){
     window.location.reload()
 }
 const hehabooya = document.getElementById('linkURL')
+const skip = document.getElemendById('requiredforwork')
+//skip
+skip.addEventListener('submit', function(e){
+  e.preventDefault()
+  let code = document.getElementById('wegohereboys').value;
+  let domain = document.getElementById('domaintogo').value;
+  let code2 = null
+  let domain2 = null
+  if (domain = 'techsta.link'){
+    domain2 = 'techstalink'
+  }
+code2 = code.replace('+','')
+  if (code.includes('techsta.link' || '/' || 'https://')){
+    code = code.replace('techsta.link',"")
+    code = code.replace('/',"")
+    code = code.replace('https://',"")
+    code = code.replace('+',"")
+  }
+  const urlto = `https://${domain}/${code}+`;
+  const doesexist = database.ref(`${domain2}/`+code2);
+  doesexist.once('value')
+  .then(snapshot => {
+    if (snapshot.exists()) {
+      window.location.href = urlto
+    }else{
+      document.getElementById('Lnoexist').innerHTML = "Shortened URL Doesn't Exist"
+    }
+  })
+})
 hehabooya.addEventListener('submit', function(e){
   e.preventDefault()
   let code = document.getElementById('wegohereboys').value;
@@ -37,18 +66,14 @@ hehabooya.addEventListener('submit', function(e){
   if (domain = 'techsta.link'){
     domain2 = 'techstalink'
   }
-  if (code.includes('+')){
-    code2 = code.replace('+','')
-  }else{
-      code2 = code
-  }
+code2 = code.replace('+','')
   if (code.includes('techsta.link' || '/' || 'https://')){
     code = code.replace('techsta.link',"")
     code = code.replace('/',"")
     code = code.replace('https://',"")
     code = code.replace('+',"")
   }
-  const urlto = `https://${domain}/` + code;
+  const urlto = `https://${domain}/${code}` ;
   const doesexist = database.ref(`${domain2}/`+code2);
   doesexist.once('value')
   .then(snapshot => {
