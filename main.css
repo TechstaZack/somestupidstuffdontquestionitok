@@ -12,6 +12,10 @@ body {
     padding-left: 10%;
     padding-right: 10%;
   }
+
+.paddinpls{
+    margin:100;
+}
   
   body::before {
     content: "";
