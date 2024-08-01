@@ -73,6 +73,10 @@
         const domain = data.domain;
         originalgoto = originalgoto.replace('/', '')
         originalgoto = originalgoto.replace('+', '')
+        if(originalgoto.length > 10){
+            originalgoto = originalgoto.substring(0, 10);
+            originalgoto = `${originalgoto}...`
+        }
         document.getElementById('totalDIV').innerHTML= `
             <h2>Techsta.Link</h2>
             <h5>Shorten any URL, for free</h5>
