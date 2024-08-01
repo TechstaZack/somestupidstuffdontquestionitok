@@ -29,6 +29,8 @@ function restart(){
 }
 const hehabooya = document.getElementById('id1')
 const skip = document.getElemendById('skip')
+const nosubmit = document.getElementById('linkURL')
+nosubmit.submit(false);
 //skip
 skip.addEventListener('click', function(){
   let code = document.getElementById('wegohereboys').value;
