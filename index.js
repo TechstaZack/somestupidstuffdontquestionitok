@@ -27,11 +27,10 @@ function copyToClipboard(){
 function restart(){
     window.location.reload()
 }
-const hehabooya = document.getElementById('linkURL')
-const skip = document.getElemendById('requiredforwork')
+const hehabooya = document.getElementById('id1')
+const skip = document.getElemendById('skip')
 //skip
-skip.addEventListener('submit', function(e){
-  e.preventDefault()
+skip.addEventListener('click', function(){
   let code = document.getElementById('wegohereboys').value;
   let domain = document.getElementById('domaintogo').value;
   let code2 = null
@@ -57,8 +56,7 @@ code2 = code.replace('+','')
     }
   })
 })
-hehabooya.addEventListener('submit', function(e){
-  e.preventDefault()
+hehabooya.addEventListener('click', function(){
   let code = document.getElementById('wegohereboys').value;
   let domain = document.getElementById('domaintogo').value;
   let code2 = null
