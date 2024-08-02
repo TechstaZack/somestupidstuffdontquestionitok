@@ -69,7 +69,7 @@
   <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5.009 5.009 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334z"/>
 </svg> Create</button>
                 <hr>
-                <button class='btn btn-info' id='swaptheweb' onclick='swaptovisit()'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                <button class='btn btn-info classnoview' id='swaptheweb' onclick='swaptovisit()'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
 </svg> Visit a Techsta.link</button>
             </div>
@@ -89,6 +89,7 @@
         const for1 = document.getElementById('big4phone1')
         const for2 = document.getElementById('big4phone2')
         const for3 = document.getElementById('big4phone3')
+        const invis = document.querySelectorAll('.classnoview')
        console.log('ran');
        elements.forEach(element => {
          element.style.height = "150px";
@@ -98,6 +99,7 @@
          for1.style.fontSize = '60px'
          for2.style.fontSize = '40px'
          for3.style.fontSize = '40px'
+         invis.style.visibility = "hidden";
         });
         
         svg.forEach(element => {
