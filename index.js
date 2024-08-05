@@ -130,6 +130,7 @@ function skipplease(){
     domain2 = 'techstalink'
   }
 code = code.replace('+','')
+code = code.replace(' ','-')
   if (code.includes('techsta.link' || '/' || 'https://')){
     code = code.replace('techsta.link',"")
     code = code.replace('/',"")
@@ -199,10 +200,11 @@ function createtheURL(){
     const domain = document.getElementById('domain').value;
     const domain2 = domain.replace('.','')
     const variableRef = database.ref(`${domain2}/${shortener}`)
-    if( shortener.includes('+') || shortener.includes('/') || shortener.includes(' ') || shortener.includes('$') || shortener.includes('#') || shortener.includes('[') || shortener.includes(']') || shortener.includes('.') ){
-        document.getElementById('errorToPrint').innerHTML = 'Your Shortener cannot contain a space, +, /, $, #, ., [,  and ].'
+    if( shortener.includes('+') || shortener.includes('/') || shortener.includes('$') || shortener.includes('#') || shortener.includes('[') || shortener.includes(']') || shortener.includes('.') ){
+        document.getElementById('errorToPrint').innerHTML = 'Your Shortener cannot contain these characters: +, /, $, #, ., [,  and ].'
         return
     }
+    shortener = shortener.replace(' ','-')
     variableRef.once('value')
       .then(snapshot => {
           const day = currentDate.getDate();
